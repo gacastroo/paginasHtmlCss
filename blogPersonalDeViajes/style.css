@@ -1,0 +1,184 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --main-bg-color: #2EC4B6;
+    --text-color: #F1FAEE;
+    --text-color-hover: #d1f7c5;
+    --second-bg-color: #FF6B6B;
+}
+
+/* CONTENEDOR GLOBAL */
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+main {
+    max-width: 1500px;
+}
+
+/* BODY */
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--main-bg-color);
+}
+
+/* TEXTOS */
+h1 {
+    font-size: 3rem;
+    margin: 2rem 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 2rem 2rem 2rem;
+    font-style:italic;
+    text-decoration: underline;
+    text-shadow: black 0.2px 0.2px;
+}
+
+p {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+ul {
+    margin-left: 1rem;
+    list-style: none;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--second-bg-color);
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--text-color-hover);
+}
+
+/* IMÁGENES */
+img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.icono {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 12px;
+}
+
+.blogDeViajes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* HERO */
+.hero-container {
+    margin-bottom: 2rem;
+}
+
+
+/* FIGURE */
+figure {
+    margin:2rem;
+}
+
+
+img.hero {
+    height: 500px;
+    border-radius: 0;
+    margin: 0;
+}
+
+ .figureHero {
+        margin: 0;
+}
+
+
+figcaption {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+}
+
+/* GALERÍA FLEX */
+.contenedor {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.contenedor figure {
+    flex: 1;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--main-bg-color);
+    padding-left: 1rem;
+    margin-left: 5rem;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    gap:0.7rem;
+    display: flex;
+    text-align: center;
+}
+
+    li {
+        padding: 0.2rem;
+        margin-left: 2rem;
+    }
+
+
+
+
+/* RESPONSIVE (MUY IMPORTANTE) */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+}
+
+/* BLOCKQUOTE */
+blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--main-bg-color);
+    padding-left: 1rem;
+    margin: 2rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);   
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
