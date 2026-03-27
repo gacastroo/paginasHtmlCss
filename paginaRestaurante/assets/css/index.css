@@ -1,0 +1,279 @@
+/* VARIABLES (paleta cálida comida) */
+:root {
+    --fondo: #f5efe6;        /* crema */
+    --marron: #7b3f00;       /* marrón */
+    --tierra: #a98467;       /* tierra */
+    --oliva: #6b8e23;        /* verde oliva */
+    --claro: #fffaf3;
+    --texto: #333;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* TIPOGRAFÍAS */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    padding: 0.9375rem; /* 15px → 0.9375rem */
+}
+
+/* HEADER */
+header {
+    background: var(--claro);
+    padding: 1.25rem; /* 20px → 1.25rem */
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* espacio entre links */
+    height: 4rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem; /* bordes redondeados */
+    padding: 0 1.5rem;
+    transition: all 0.3s ease; /* transición suave */
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--main-bg-color);
+    color: var(--text-color-hover);
+    transform: scale(1.05); /* efecto sutil de zoom */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+/* HERO (tu figure con clase hero) */
+.hero {
+    width: 100%;
+    height: 28.125rem; /* 450px → 28.125rem */
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    border-style: groove;
+}
+
+/* MENU */
+#menu {
+    padding: 2.5rem; /* 40px → 2.5rem */
+    text-align: center;
+}
+
+/* CONTENEDOR DE PLATOS */
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem; /* 40px → 2.5rem */
+    flex-wrap: wrap;
+}
+
+/* TARJETAS (tus figure dentro de menu) */
+#menu figure {
+    background: var(--claro);
+    padding: 0.9375rem; /* 15px → 0.9375rem */
+    border-radius: 0.625rem; /* 10px → 0.625rem */
+    border: 0.0625rem solid #ddd; /* 1px → 0.0625rem */
+    width: 15.625rem; /* 250px → 15.625rem */
+}
+
+#menu img {
+    width: 100%;
+    border-radius: 0.625rem; /* 10px → 0.625rem */
+    min-height: 9.375rem; /* 150px → 9.375rem */
+}
+
+/* PRECIO (último <p> dentro de cada plato) */
+#menu figure p:last-of-type {
+    color: var(--oliva);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.625rem; /* 10px → 0.625rem */
+}
+
+/* NOSOTROS */
+#nosotros {
+    padding: 3rem 2rem; /* más aire alrededor */
+    text-align: center;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    max-width: 60rem;
+}
+
+#descripcion {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    line-height: 1.7; /* más legible */
+    font-size: 1.05rem; /* ligeramente más grande */
+    color: var(--texto);
+    text-align: justify; /* lectura más profesional */
+}
+
+#descripcion p {
+    margin-bottom: 1rem;
+}
+
+#descripcion span {
+    color: var(--oliva);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+blockquote {
+    margin: 1.5rem auto 0 auto;
+    font-style: italic;
+    color: var(--tierra);
+    font-size: 1.125rem;
+    padding-left: 1rem;
+    max-width: 50rem;
+    border-radius: 0.5rem;
+}
+
+/* TABLA */
+#horarios {
+    padding: 2.5rem; /* 40px → 2.5rem */
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.625rem; /* 10px → 0.625rem */
+    border: 0.0625rem solid #ccc; /* 1px → 0.0625rem */
+}
+
+tr:nth-child(even) {
+    background-color: var(--claro);
+}
+
+/* FOOTER */
+footer {
+    background: var(--marron);
+    color: white;
+    padding: 0.625rem; /* 10px → 0.625rem */
+    border-radius: 0.0625rem; /* 1% remains as % */
+    text-align: center;
+}
+
+footer a {
+    color: var(--oliva);
+    text-decoration: none;
+}
+
+footer p {
+    padding: 0.25rem; /* 4px → 0.25rem */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--oliva);
+}
+
+figure:hover:not(:has(.hero)) {
+    transform: scale(1.2);
+}
+
+figure {
+    transition: transform 0.3s ease;
+}
+
+#listaFooter ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; /* 20px → 1.25rem */
+    padding: 0.625rem; /* 10px → 0.625rem */
+}
+
+#listaFooter li {
+    list-style: none;
+}
+
+footer a {
+    color: var(--claro);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#eslogan {
+    text-align: center;
+    padding: 2.5rem; /* 40px → 2.5rem */
+    font-size: 1.875rem; /* 30px → 1.875rem */
+    font-style: italic;
+    color: var(--texto);
+}
+
+#descripcion {
+    max-width: 50.75rem; /* 700px → 43.75rem */
+    margin: 0 auto;
+    padding: 1.25rem; /* 20px → 1.25rem */
+    background-color: var(--fondo);
+    border-radius: 0.625rem; /* 10px → 0.625rem */
+    box-shadow: 0px 0.25rem 0.625rem rgba(0,0,0,0.1); /* 4px → 0.25rem, 10px → 0.625rem */
+    text-align: left;
+}
+
+span {
+    color: var(--oliva);
+    text-transform: lowercase;
+}
+
+/* CSS para la tabla de horarios */
+table {
+width: 100%;
+border-collapse: collapse; /* elimina el espacio doble entre bordes */
+}
+th, td {
+padding: 12px 16px;
+text-align: center;
+border-bottom: 1px solid #e5e5e5;
+}
+th {
+background-color: var(--color-primario);
+color: rgb(0, 0, 0);
+}
+tr:nth-child(even) { /* filas pares con fondo diferente */
+background-color: #f9f5f0;
+}
