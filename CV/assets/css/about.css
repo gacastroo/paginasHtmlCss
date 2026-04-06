@@ -1,149 +1,162 @@
-html, body 
-{
+/* =====================
+   RESET Y BASE
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
-/*Imagen de fondo*/
-.imageh 
-{
+
+/* =====================
+   FONDO PRINCIPAL
+   ===================== */
+.imageh {
   background-image: url("/paginasHtmlCss/CV/assets/images/jpg/background2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: auto;
-  float: left;
+  min-height: 100%;
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
 }
 
-/*titulo*/
-.text 
-{
+/* =====================
+   TÍTULO PRINCIPAL
+   ===================== */
+.text {
   color: #ffcd00;
   text-shadow: 4px 4px 16px rgba(253, 255, 115, 0.411);
-  font-size: 3vw; /* cambiamos el tamaño de fuente a viewport width */
+  font-size: clamp(2rem, 8vw, 5rem); /* fluido: mín 2rem → máx 5rem */
   text-align: center;
+  padding: 20px 16px 0;
 }
-/*Recuadro negro donde se encuentra el texto*/
-.recuadro 
-{
+
+/* =====================
+   RECUADRO DE CONTENIDO
+   ===================== */
+.recuadro {
   background-color: rgba(0, 0, 0, 0.356);
   color: white;
-  font-size: 20px;
-  max-width: 70%; /* cambiamos width a max-width */
+  font-size: clamp(15px, 2vw, 20px); /* fluido */
+  width: calc(100% - 40px);
+  max-width: 1400px;
   height: auto;
-  margin: 50px auto; /* usamos margin auto para centrar horizontalmente */
-  padding: 20px;
-  border-radius: 1%;
+  margin: 40px auto;
+  padding: clamp(16px, 4vw, 32px);
+  border-radius: 6px;
 }
-/*Titulo Secciones*/
-h2 
-{
+
+/* =====================
+   TÍTULOS DE SECCIÓN
+   ===================== */
+h2 {
   border-bottom: 3px solid #0066FF;
   text-align: center;
-  font-size: 30px;
+  font-size: clamp(20px, 4vw, 30px);
 }
-/*Video*/
-iframe
-{
-margin-left: 27%;
+
+/* =====================
+   IFRAMES RESPONSIVE
+   ===================== */
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 20px auto;
+  aspect-ratio: 16 / 9;
 }
-/*Enlace*/
-a
-{
-margin-left: 30%;
+
+/* Fallback para navegadores sin soporte de aspect-ratio */
+@supports not (aspect-ratio: 16/9) {
+  .iframe-wrapper {
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
-/*Enlace una vez clickeado*/
-a, a:visited {
-  color: #ffffff5d;
-  font-size: 50px;
-  text-decoration: none;
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
-/*Enlace cuando pasas por encima*/
-a:hover, a:active {
-  color: #e7ff0b;
+
+/* Iframes directos (sin wrapper, retrocompatibilidad) */
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 20px auto;
+  border: 0;
 }
-/*Imagen*/
-img
-{
-  margin-left: 10%;
+
+/* =====================
+   IMAGEN
+   ===================== */
+img {
+  display: block;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
   border-radius: 5%;
 }
-/*Caja del enlace para volver al CV*/
-div.return
-{
-  margin:70px;
+
+/* =====================
+   CONTENEDOR IMAGEN
+   ===================== */
+div.contenadorimg {
+  padding: 20px 0 10px;
 }
-/*Caja de la imagen*/
-div.contenadorimg
-{
-  padding: 20px;
+
+/* =====================
+   ENLACE DE VUELTA AL CV
+   ===================== */
+div.return {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 60px;
+  margin: 0;
 }
-/* estilos para pantallas pequeñas */
-@media (max-width: 768px) 
-{ 
-  .text 
-  {
-    font-size: 8vw;
-  }
-  
+
+a,
+a:visited {
+  color: #ffffff5d;
+  font-size: clamp(24px, 5vw, 50px);
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover,
+a:active {
+  color: #e7ff0b;
+}
+
+/* =====================
+   MEDIA QUERY: MÓVIL
+   ===================== */
+@media (max-width: 480px) {
   .recuadro {
-    max-width: 100%;
-    height: auto;
-    padding: 20px;
+    width: calc(100% - 24px);
+    padding: 14px;
+    margin: 24px auto;
   }
 
-  
-  iframe
-  {
-  margin-left: 15%;
-  }
-  a
-    {
-    margin-left: 0px;
-    }
-  .image-container {
-      max-width: 100%;
-    }
-  img
-  {
+  img {
     width: 100%;
-    max-width: 600px;
-    margin-left: 40px;
-  }
-}
-/*estilos para pantallas medianas*/
-@media (max-width: 1580px) 
-{ 
-  .text 
-  {
-    font-size: 8vw;
-  }
-  
-  .recuadro 
-  {
     max-width: 100%;
-    height: auto;
-    padding: 20px;
-    margin-left: 50px;margin-right: 50px;border-left-width: 0px;
-  }
-
-  iframe
-  {
-    margin-left: 15%;
-  }
-  
-  a
-  {
-    margin-left: 0px;
-  }
-  .image-container 
-    {
-      max-width: 100%;
-    }
-  img
-  {
-    width: 90%;
-    max-width: 800px;
-    margin-left: 5%;
+    border-radius: 3%;
   }
 }
