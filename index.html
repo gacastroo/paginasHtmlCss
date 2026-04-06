@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guillermo Castro — Proyectos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f5f4f0;
+      min-height: 100vh;
+      font-family: 'Rajdhani', sans-serif;
+      padding: 3rem 2rem;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      color: #1a1a2e;
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+
+    .header p {
+      font-size: 1rem;
+      color: #6b7280;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: #2563eb;
+      margin: 1.2rem auto 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-top: 3px solid #2563eb;
+      padding: 2rem 1.5rem 1.5rem;
+      position: relative;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+      border-color: #2563eb;
+    }
+
+    .card-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.85rem;
+      color: #2563eb;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .card-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: #1a1a2e;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .card-arrow {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.2rem;
+      color: #2563eb;
+      opacity: 0.3;
+      transition: opacity 0.2s;
+    }
+
+    .card:hover .card-arrow { opacity: 1; }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Guillermo Castro</h1>
+    <p>HTML &amp; CSS Projects</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="blogPersonalDeViajes/index.html">
+      <div class="card-num">01</div>
+      <div class="card-name">Blog de Viajes</div>
+      <div class="card-tag">HTML · CSS</div>
+      <span class="card-arrow">→</span>
+    </a>
+    <a class="card" href="CV/index.html">
+      <div class="card-num">02</div>
+      <div class="card-name">Currículum</div>
+      <div class="card-tag">HTML · CSS</div>
+      <span class="card-arrow">→</span>
+    </a>
+    <a class="card" href="paginaRestaurante/index.html">
+      <div class="card-num">03</div>
+      <div class="card-name">Restaurante</div>
+      <div class="card-tag">HTML · CSS</div>
+      <span class="card-arrow">→</span>
+    </a>
+    <a class="card" href="Portfolio/index.html">
+      <div class="card-num">04</div>
+      <div class="card-name">Portfolio</div>
+      <div class="card-tag">HTML · CSS</div>
+      <span class="card-arrow">→</span>
+    </a>
+    <a class="card" href="tiendaOnline/index.html">
+      <div class="card-num">05</div>
+      <div class="card-name">Tienda Online</div>
+      <div class="card-tag">HTML · CSS</div>
+      <span class="card-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>gacastroo · github pages</footer>
+
+</body>
+</html>
