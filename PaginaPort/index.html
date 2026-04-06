@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-    <!-- Boton hacia arriba -->
-    <a class="ir-arriba" href="#" title="Volver arriba">
-        <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-        </span>
-    </a>    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,10 +15,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">     
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     
     <body>
+        <!-- Boton hacia arriba -->
+        <a class="ir-arriba" href="#" title="Volver arriba">
+            <span class="fa-stack">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+
         <!-- Redes sociales flotantes -->
         <div class="position-fixed top-50 start-0 translate-middle-y p-3" id="redes">
             <div class="mb-3 text-center">
@@ -93,12 +96,10 @@
                             <li class="nav-item">
                                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link text-white px-2"></a>
                             </li>
-                            <li class="nav-item">
-                                <li class="nav-item d-flex align-items-center">
-                                    <button id="toggleMode" class="btn">
-                                        <i id="modeIcon" class="fas fa-moon"></i>
-                                    </button>
-                                </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <button id="toggleMode" class="btn">
+                                    <i id="modeIcon" class="fas fa-moon"></i>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -253,7 +254,7 @@
                     </div>
                 </div>
             </section>
-            <section id="quotes">
+            <section id="quotes" class="py-5">
                 <div class="container">
                     <div class="quote-box">
                     <div class="quote">

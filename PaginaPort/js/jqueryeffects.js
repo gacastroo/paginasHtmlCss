@@ -1,23 +1,19 @@
 $(document).ready(function () {
-    $("a[href^='#']").on("click", function (event) {
+
+    // Handler para todas las anclas internas EXCEPTO ir-arriba
+    $("a[href^='#']:not(.ir-arriba)").on("click", function (event) {
         event.preventDefault();
 
-        let targetId = this.getAttribute("href").substring(1); // Quita el "#"
+        let targetId = this.getAttribute("href").substring(1);
 
-        // Evitar error si targetId está vacío (href="#")
-        if (targetId.trim() === "") {
-            return;
-        }
+        if (targetId.trim() === "") return;
 
         let target = $("#" + targetId);
 
         if (target.length) {
-            $("html, body").animate(
-                {
-                    scrollTop: target.offset().top
-                },
-                350 // Duración de la animación
-            );
+            let navbarHeight = $("#header").outerHeight() || 90;
+            let offsetTop = targetId === "inicio" ? 0 : target.offset().top - navbarHeight;
+            $("html, body").animate({ scrollTop: offsetTop }, 350);
         }
     });
 
@@ -35,14 +31,20 @@ $(document).ready(function () {
 });
 
 /////////////////////////ARRIBA/////////////////////////////////////////////
-$(document).ready(function(){ irArriba(); }); //Hacia arriba
-
+$(document).ready(function(){ irArriba(); });
 
 function irArriba(){
-  $('.ir-arriba').click(function(){ $('body,html').animate({ scrollTop:'0px' },1000); });
-  $(window).scroll(function(){
-    if($(this).scrollTop() > 0){ $('.ir-arriba').slideDown(600); }else{ $('.ir-arriba').slideUp(600); }
-  });
-  $('.ir-abajo').click(function(){ $('body,html').animate({ scrollTop:'1000px' },1000); });
-}
+    // Click directo en la flecha — sin pasar por el handler general
+    $('.ir-arriba').on("click", function(e){
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 800);
+    });
 
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 0){
+            $('.ir-arriba').slideDown(600);
+        } else {
+            $('.ir-arriba').slideUp(600);
+        }
+    });
+}

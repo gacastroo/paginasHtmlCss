@@ -32,10 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   
-    console.log('Total project cards found:', projectCards.length);
-    projectCards.forEach((card, index) => {
+    projectCards.forEach((card) => {
       card.addEventListener('mouseenter', function() {
-        console.log(`Mouse entered card ${index}`);
         projectCards.forEach(otherCard => {
           if (otherCard !== card) {
             otherCard.classList.add('blur');
@@ -44,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       
       card.addEventListener('mouseleave', function() {
-        console.log(`Mouse left card ${index}`);
         projectCards.forEach(otherCard => {
           if (otherCard !== card) {
             otherCard.classList.remove('blur');

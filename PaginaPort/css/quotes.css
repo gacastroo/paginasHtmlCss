@@ -1,9 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Karla);
 #quote{
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 50px;
+    letter-spacing: 2px;
 }
 
 .cursor {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 50px;
 }
 
@@ -29,7 +31,7 @@
 
    
 .quote {
-    background-color: #ffffff;
+    background-color: #f8f7eb;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     color: #000000;
