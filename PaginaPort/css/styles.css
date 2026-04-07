@@ -80,7 +80,7 @@ section {
 section#estudios {
     margin: 0;
     padding: 5% 5%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +104,7 @@ section#trabajos {
 section#about {
     margin: 0;
     padding: 5% 5%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,7 +116,7 @@ section#about {
 section#contacto {
     margin: 0;
     padding: 5% 5%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
