@@ -556,7 +556,24 @@ section#tech {
 .alto-contraste .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffff00' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
-  
+
+  /* Alto contraste: sections */
+.alto-contraste section#inicio,
+.alto-contraste section#estudios,
+.alto-contraste section#trabajos,
+.alto-contraste section#about,
+.alto-contraste section#contacto,
+.alto-contraste section#quotes,
+.alto-contraste section#tech {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+    border-top-color: var(--accent-color) !important;
+}
+
+.alto-contraste section#inicio {
+    border-top: none !important;
+}
+
 
 /*Flecha para hacer la pagina hacia arriba*/
 .ir-arriba{
